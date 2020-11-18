@@ -1,0 +1,23 @@
+{
+    "name": "js-smart-request-cache",
+    "version": "1.0.0",
+    "description": "a small wrapper for fetch",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/raadegmbh/js-smart-request-cache.git"
+    },
+    "keywords": [
+        "network",
+        "fetch"
+    ],
+    "author": "Raade GmbH",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/raadegmbh/js-smart-request-cache/issues"
+    },
+    "homepage": "https://github.com/raadegmbh/js-smart-request-cache#readme"
+}
