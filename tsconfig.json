@@ -1,15 +1,27 @@
 {
     "compilerOptions": {
-        "noImplicitAny": true,
-        "target": "ES5",
-        "allowSyntheticDefaultImports": true,
-        "alwaysStrict": true,
+        // Project Options
         "declaration": true,
         "declarationMap": true,
-        "module": "ES5",
-        "moduleResolution": "Node",
+        "module": "ES6",
+        "outDir": "dist",
         "removeComments": true,
+        "rootDir": "src",
         "sourceMap": true,
+        "target": "ES6",
+        // Strict Checks
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strict": true,
+        // Module Resolution
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "classic",
+        // Linter Checks
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
     },
     "include": [
         "src/**/*"

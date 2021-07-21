@@ -1,1 +1,0 @@
-{"version":3,"file":"RequestWaitEvent.d.ts","sourceRoot":"","sources":["RequestWaitEvent.ts"],"names":[],"mappings":"AAAA,OAAO,cAAc,MAAM,gBAAgB,CAAC;AAE5C,UAAU,gBAAgB;IACtB,CAAC,GAAG,EAAE,MAAM,GAAG,KAAK,CAAC,cAAc,CAAC,CAAC;CACxC;AAED,eAAe,gBAAgB,CAAC"}

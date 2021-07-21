@@ -1,7 +1,5 @@
 import RequestCacheData from "./RequestCacheData";
 
-interface RequestCache {
-    [url: string]: RequestCacheData;
-}
+type RequestCache = Map<string, undefined | RequestCacheData>;
 
 export default RequestCache;
