@@ -57,7 +57,7 @@ class RequestHelper {
                         resolve(TEMP_CACHE_VALUE.data);
                         return;
                     } else {
-                        RequestHelper._cache.set(url, undefined);
+                        RequestHelper._cache.delete(url);
                     }
                 }
             }

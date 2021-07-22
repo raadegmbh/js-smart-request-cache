@@ -34,7 +34,7 @@ class RequestHelper {
                         return;
                     }
                     else {
-                        RequestHelper._cache.set(url, undefined);
+                        RequestHelper._cache.delete(url);
                     }
                 }
             }
