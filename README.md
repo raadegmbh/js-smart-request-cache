@@ -16,7 +16,6 @@ class RequestHelper {
 RequestHelper.timeToExpireInMilliseconds = 10000;
 
 RequestHelper.GET("https://example.com/api/orders?id=1", {
-    method: 'GET',
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
