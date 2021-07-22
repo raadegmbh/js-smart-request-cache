@@ -1,0 +1,1 @@
+{"version":3,"file":"RequestCacheData.d.ts","sourceRoot":"","sources":["../src/RequestCacheData.ts"],"names":[],"mappings":"AAAA,OAAO,mBAAmB,MAAM,uBAAuB,CAAC;AAExD,UAAU,gBAAgB;IACtB,OAAO,EAAE,IAAI,CAAC;IACd,IAAI,EAAE,GAAG,CAAC;IACV,IAAI,EAAE,mBAAmB,CAAC;CAC7B;AAED,eAAe,gBAAgB,CAAC"}

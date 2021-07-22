@@ -1,3 +1,3 @@
-import RequestHelper from './src/RequestHelper';
+import RequestHelper from './dist/RequestHelper';
 
 export default RequestHelper;

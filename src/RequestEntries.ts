@@ -1,5 +1,3 @@
-interface RequestEntries {
-    [url: string]: Promise<any>;
-}
+type RequestEntries = Map<string, Promise<any>>;
 
 export default RequestEntries;
