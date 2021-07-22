@@ -1,6 +1,6 @@
 {
     "name": "js-smart-request-cache",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "a small wrapper for fetch",
     "main": "index.js",
     "scripts": {
