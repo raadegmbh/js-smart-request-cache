@@ -4,6 +4,7 @@ declare class RequestHelper {
     private static _events;
     private static _cache;
     static timeToExpireInMilliseconds: number;
+    static ClearCache(): void;
     static GET(url: string, fetchOptions?: object, forceRequest?: boolean, responseType?: RequestResponseType): Promise<any>;
     private static HandlePromise;
     private static AddEvent;

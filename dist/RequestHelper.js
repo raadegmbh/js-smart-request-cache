@@ -1,5 +1,8 @@
 import RequestResponseType from "./RequestResponseType";
 class RequestHelper {
+    static ClearCache() {
+        RequestHelper._cache.clear();
+    }
     static GET(url, fetchOptions = {}, forceRequest = false, responseType = RequestResponseType.Json) {
         if (forceRequest === true) {
             return new Promise((resolve, reject) => {

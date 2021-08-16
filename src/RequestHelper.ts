@@ -11,6 +11,10 @@ class RequestHelper {
     private static _cache: RequestCache = new Map();
     public static timeToExpireInMilliseconds: number = 10000;
 
+    static ClearCache(): void {
+        RequestHelper._cache.clear();
+    }
+
     static GET(url: string, fetchOptions: object = {}, forceRequest: boolean = false, responseType: RequestResponseType = RequestResponseType.Json): Promise<any> {
         if (forceRequest === true) {
             return new Promise((resolve: any, reject: any) => {
