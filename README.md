@@ -7,7 +7,7 @@
 ```js
 class RequestHelper {
     static timeToExpireInMilliseconds: number; // the time (milliseconds) it takes to invalidate the cached value.
-    static GET(url: string, fetchOptions?: object, forceRequest?: boolean, responseType?: RequestResponseType): Promise<any>;
+    static GET(url: string, fetchOptions?: object, forceRequest?: boolean, responseType?: RequestResponseType, acceptableStatusCodes?: number[]): Promise<any>;
 }
 ```
 
@@ -21,7 +21,8 @@ RequestHelper.GET("https://example.com/api/orders?id=1", {
         'Accept': 'application/json',
     },
     false,
-    RequestResponseType.Json
+    RequestResponseType.Json,
+    [200, 201]
 })
     .then((response) => {
         // Handle Response ...

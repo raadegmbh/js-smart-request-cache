@@ -3,11 +3,14 @@ class RequestHelper {
     static ClearCache() {
         RequestHelper._cache.clear();
     }
-    static GET(url, fetchOptions = {}, forceRequest = false, responseType = RequestResponseType.Json) {
+    static GET(url, fetchOptions = {}, forceRequest = false, responseType = RequestResponseType.Json, acceptableStatusCodes = [200]) {
         if (forceRequest === true) {
             return new Promise((resolve, reject) => {
                 fetch(url, fetchOptions)
                     .then((response) => {
+                    if (acceptableStatusCodes.includes(response.status) === false) {
+                        throw new Error(response.statusText);
+                    }
                     return (responseType === RequestResponseType.Json) ? response.json() : response.text();
                 })
                     .then((data) => {
@@ -44,13 +47,16 @@ class RequestHelper {
             RequestHelper.AddEvent(url, resolve, reject);
             _promise = fetch(url, fetchOptions);
             RequestHelper._requests.set(url, _promise);
-            RequestHelper.HandlePromise(url, _promise, responseType);
+            RequestHelper.HandlePromise(url, _promise, responseType, acceptableStatusCodes);
             return;
         });
     }
-    static HandlePromise(url, promise, responseType) {
+    static HandlePromise(url, promise, responseType, acceptableStatusCodes) {
         promise
             .then((response) => {
+            if (acceptableStatusCodes.includes(response.status) === false) {
+                throw new Error(response.statusText);
+            }
             return (responseType === RequestResponseType.Json) ? response.json() : response.text();
         })
             .then((data) => {

@@ -1,1 +1,1 @@
-{"version":3,"file":"RequestWaitEvent.d.ts","sourceRoot":"","sources":["../src/RequestWaitEvent.ts"],"names":[],"mappings":"AAAA,OAAO,cAAc,MAAM,gBAAgB,CAAC;AAE5C,aAAK,gBAAgB,GAAG,GAAG,CAAC,MAAM,EAAE,KAAK,CAAC,cAAc,CAAC,CAAC,CAAC;AAE3D,eAAe,gBAAgB,CAAC"}
+{"version":3,"file":"RequestWaitEvent.d.ts","sourceRoot":"","sources":["../src/RequestWaitEvent.ts"],"names":[],"mappings":"AAAA,OAAO,cAAc,MAAM,gBAAgB,CAAC;AAE5C,KAAK,gBAAgB,GAAG,GAAG,CAAC,MAAM,EAAE,KAAK,CAAC,cAAc,CAAC,CAAC,CAAC;AAE3D,eAAe,gBAAgB,CAAC"}

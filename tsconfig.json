@@ -9,6 +9,11 @@
         "rootDir": "src",
         "sourceMap": true,
         "target": "ES6",
+        "lib": [
+            "ES6",
+            "DOM",
+            "ES2017"
+        ],
         // Strict Checks
         "alwaysStrict": true,
         "noImplicitAny": true,

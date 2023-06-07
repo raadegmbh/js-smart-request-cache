@@ -15,11 +15,15 @@ class RequestHelper {
         RequestHelper._cache.clear();
     }
 
-    static GET(url: string, fetchOptions: object = {}, forceRequest: boolean = false, responseType: RequestResponseType = RequestResponseType.Json): Promise<any> {
+    static GET(url: string, fetchOptions: object = {}, forceRequest: boolean = false, responseType: RequestResponseType = RequestResponseType.Json, acceptableStatusCodes: number[] = [200]): Promise<any> {
         if (forceRequest === true) {
             return new Promise((resolve: any, reject: any) => {
                 fetch(url, fetchOptions)
-                    .then((response: any) => {
+                    .then((response: Response) => {
+                        if (acceptableStatusCodes.includes(response.status) === false) {
+                            throw new Error(response.statusText);
+                        }
+
                         return (responseType === RequestResponseType.Json) ? response.json() : response.text();
                     })
                     .then((data: any) => {
@@ -73,14 +77,18 @@ class RequestHelper {
             RequestHelper.AddEvent(url, resolve, reject);
             _promise = fetch(url, fetchOptions);
             RequestHelper._requests.set(url, _promise);
-            RequestHelper.HandlePromise(url, _promise, responseType);
+            RequestHelper.HandlePromise(url, _promise, responseType, acceptableStatusCodes);
             return;
         });
     }
 
-    private static HandlePromise(url: string, promise: Promise<any>, responseType: RequestResponseType): void {
+    private static HandlePromise(url: string, promise: Promise<any>, responseType: RequestResponseType, acceptableStatusCodes: number[]): void {
         promise
-            .then((response: any) => {
+            .then((response: Response) => {
+                if (acceptableStatusCodes.includes(response.status) === false) {
+                    throw new Error(response.statusText);
+                }
+
                 return (responseType === RequestResponseType.Json) ? response.json() : response.text();
             })
             .then((data) => {

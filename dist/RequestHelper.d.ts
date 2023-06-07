@@ -5,7 +5,7 @@ declare class RequestHelper {
     private static _cache;
     static timeToExpireInMilliseconds: number;
     static ClearCache(): void;
-    static GET(url: string, fetchOptions?: object, forceRequest?: boolean, responseType?: RequestResponseType): Promise<any>;
+    static GET(url: string, fetchOptions?: object, forceRequest?: boolean, responseType?: RequestResponseType, acceptableStatusCodes?: number[]): Promise<any>;
     private static HandlePromise;
     private static AddEvent;
     private static GetExpired;
